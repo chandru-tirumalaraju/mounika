@@ -1,7 +1,8 @@
 #!bin/bash
 echo "In shell script"
 stackname='mounu-stack'
-aws cloudformation deploy --template-file mounu.yml --stack-name ${stackname} --no-execute-changeset
+aws cloudformation deploy --template-file mounu.yml --stack-name ${stackname} --no-fail-on-empty-changeset
+
 
 
 
