@@ -1,4 +1,6 @@
 #!bin/bash
 echo "In shell script"
-aws cloudformation deploy --template-file mounu.yml --stack-name 'mounu-'
+stackname='mounu-stack'
+aws cloudformation deploy --template-file mounu.yml --stack-name ${stackname}
+
 
