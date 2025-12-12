@@ -1,0 +1,19 @@
+Parameters:
+    amiid:
+      Type: String
+      Description: "Testing"
+    InstanceType:
+      Type: String
+      Description: "Give the InstanceType"
+      AllowedValues: 
+        - t3.micro
+        - t3.small
+
+Resources:
+    RaniInstance:
+        Type: AWS::EC2::Instance
+        Properties:
+            InstanceType: !Ref InstanceType
+            ImageId: !Ref amiid
+            SecurityGroups:
+                - default

@@ -1,8 +1,12 @@
+Parameters:
+  BucketName:
+    Type: String
+    Description: "Name of the S3 bucket to be created"
 Resources:
   MounuBucket:
     Type: AWS::S3::Bucket
     Properties:
-      BucketName: "chandumounubuc"      
+      BucketName: !Ref BucketName
     
     
         
